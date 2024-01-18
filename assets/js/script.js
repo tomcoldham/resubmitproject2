@@ -194,10 +194,13 @@ function displaybutton() {
 
 // gets user the next question when next is clicked
 nextQuestion.addEventListener("click", () => {
-    if (questionNumber < questions.length) {
-        displaybutton();
-    } else {
-    }
-
-
+    displaybutton();
+  
 });
+
+restart.addEventListener("click", restartQuiz);
+function restartQuiz() {
+    questionNumber = -1;
+    score = 0;
+    displaybutton();
+}
