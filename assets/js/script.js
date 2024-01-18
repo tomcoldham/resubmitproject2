@@ -210,6 +210,7 @@ restart.addEventListener("click", restartQuiz);
 function restartQuiz() {
     questionNumber = -1;
     score = 0;
+    stopTimer();
     displaybutton();
 }
 
