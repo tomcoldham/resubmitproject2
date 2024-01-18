@@ -108,7 +108,6 @@ const questionAnswer = document.getElementById("questionanswers");
 const nextQuestion = document.getElementById("next-question");
 const restart = document.getElementById("restart-question");
 const timerElement = document.getElementById("timer");
-const progressBar = document.getElementById("progressBar")
 
 
 
@@ -136,7 +135,7 @@ function loadQuestion() {
     let presentQuestion = questions[questionNumber];
     let questionNum = questionNumber + 1;
     questionText.innerHTML = "Question " + questionNum + " / " + questions.length + " - " + presentQuestion.question;
-    progressFull.style.width = '${(questNum / questions.length) * 100} px';
+    document.getElementById("progressFull").style.width = `${(questionNum / questions.length) * 100}%`;
     presentQuestion.choices.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
@@ -205,7 +204,7 @@ function displaybutton() {
 // gets user the next question when next is clicked
 nextQuestion.addEventListener("click", () => {
     displaybutton();
-  
+
 });
 
 restart.addEventListener("click", restartQuiz);
@@ -218,22 +217,22 @@ function restartQuiz() {
 
 // Timer functions
 function startTimer() {
-timerTime = 10;
-updateTimer();
-timerInterval = setInterval(timerTick, 1000);
+    timerTime = 10;
+    updateTimer();
+    timerInterval = setInterval(timerTick, 1000);
 }
 
 function stopTimer() {
-clearInterval(timerInterval);
+    clearInterval(timerInterval);
 }
 
 function resetTimer() {
-timerElement.innerText = "10";
+    timerElement.innerText = "10";
 }
 
 function timerTick() {
     if (timerTime > 0) {
-        timerTime -- ;
+        timerTime--;
         updateTimer();
     } else {
         stopTimer();
@@ -243,6 +242,6 @@ function timerTick() {
 }
 
 function updateTimer() {
-const roundedTime = Math.round(timerTime);
-timerElement.innerText = roundedTime;
+    const roundedTime = Math.round(timerTime);
+    timerElement.innerText = roundedTime;
 }
