@@ -207,7 +207,9 @@ function restartQuiz() {
 
 // Timer functions
 function startTimer() {
-
+timerTime = 10;
+updateTimer();
+timerInterval = setinterval(timerTick, 1000);
 }
 
 function stopTimer() {
@@ -218,4 +220,10 @@ function resetTimer() {
 
 }
 
-function 
+function timerTick() {
+
+}
+
+function updateTimer() {
+
+}
