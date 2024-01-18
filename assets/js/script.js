@@ -204,4 +204,3 @@ function restartQuiz() {
     score = 0;
     displaybutton();
 }
-t
