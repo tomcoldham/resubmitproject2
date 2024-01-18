@@ -43,6 +43,14 @@ p {
     text-transform: uppercase;
 }
 
+/* styling for timer */
+
+.timer {
+min-height: 100px;
+min-width: 100px;
+background-color: red;
+}
+
 /* styling for answer area */
 #questionanswers {
     display: flex;
