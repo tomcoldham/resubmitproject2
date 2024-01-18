@@ -51,6 +51,9 @@ min-width: 100px;
 background-color: red;
 }
 
+/* styling for progress bar */
+
+
 /* styling for answer area */
 #questionanswers {
     display: flex;
