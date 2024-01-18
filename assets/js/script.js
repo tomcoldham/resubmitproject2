@@ -136,6 +136,7 @@ function loadQuestion() {
     let presentQuestion = questions[questionNumber];
     let questionNum = questionNumber + 1;
     questionText.innerHTML = "Question " + questionNum + " / " + questions.length + " - " + presentQuestion.question;
+    progressFull.style.width = '${(questNum / questions.length) * 100} px';
     presentQuestion.choices.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
