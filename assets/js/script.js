@@ -144,7 +144,7 @@ function loadQuestion() {
 // function to clear the previous question
 
 function clearQuestion() {
-    nextQuestion.style.display = 'none';
+    nextQuestion.disabled = true;
     while (questionAnswer.firstChild) {
         questionAnswer.removeChild(questionAnswer.firstChild);
     }
@@ -169,7 +169,8 @@ function chooseAnswer(e) {
         button.disabled = true;
 
     });
-    nextQuestion.style.display = "block";
+    nextQuestion.disabled = false;
+    restart.disabled = false;
 }
 
 
