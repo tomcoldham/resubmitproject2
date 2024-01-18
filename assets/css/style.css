@@ -1,0 +1,136 @@
+/* font import from google */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* removed default browser styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'oswald', sans-serif;
+}
+
+/* background page of quiz styling */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 44%, #FFCC70 100%);
+}
+
+/* main quiz area styling */
+.gamearea {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border: 5px solid grey;
+    min-height: 65vh;
+    min-width: 65vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin: 15px;
+    font-size: 40px;
+}
+
+p {
+    margin: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* styling for answer area */
+#questionanswers {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* styling for answer buttons to question */
+.answerbuttons {
+    text-align: left;
+    margin: 10px;
+    padding: 5px;
+    height: 55px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+/* styling for next button */
+.nextquestionstyle {
+    height: 65px;
+    width: 250px;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    font-size: 40px;
+    border-radius: 10px;
+    margin-left: 250px;
+}
+
+/* give hovering affect only when device supports hover */
+@media (hover: hover) {
+    .answerbuttons:hover {
+        background-color: rgb(41, 122, 177);
+    }
+
+    .nextquestionstyle:hover {
+        transform: scale(1.2)
+    }
+}
+
+.nextquestionstyle:hover {
+    transform: scale(1.2)
+}
+
+/* shows green if question is correct */
+.correct {
+    background-color: rgb(138, 223, 11);
+    color: white;
+}
+
+/* shows red if question is incorrect */
+.incorrect {
+    background-color: rgb(124, 4, 4);
+    color: white;
+}
+
+/* media query for smaller devices */
+@media only screen and (max-width: 768px) {
+    .gamearea {
+        margin: auto;
+        min-height: 60vh;
+        min-width: 15vh;
+    }
+
+
+    h1,
+    p {
+        font-size: 15px;
+    }
+
+    .answerbuttons {
+        text-align: left;
+        margin: 5px;
+        padding: 5px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    .nextquestionstyle {
+        height: 40px;
+        width: 75px;
+        background-color: #8BC6EC;
+        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        font-size: 20px;
+        border-radius: 10px;
+        align-items: center;
+        margin-left: 140px;
+
+    }
+}
