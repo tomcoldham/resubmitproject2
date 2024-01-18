@@ -107,6 +107,8 @@ const questionText = document.getElementById("questiondisplay");
 const questionAnswer = document.getElementById("questionanswers");
 const nextQuestion = document.getElementById("next-question");
 const restart = document.getElementById("restart-question");
+const timerElement = document.getElementById("timer");
+
 
 
 // question number and score tracker
