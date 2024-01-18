@@ -204,3 +204,18 @@ function restartQuiz() {
     score = 0;
     displaybutton();
 }
+
+// Timer functions
+function startTimer() {
+
+}
+
+function stopTimer() {
+
+}
+
+function resetTimer() {
+
+}
+
+function 
