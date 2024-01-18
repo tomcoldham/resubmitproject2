@@ -48,10 +48,21 @@ p {
 .timer {
 min-height: 100px;
 min-width: 100px;
-background-color: red;
+border: 0.5 solid red;
 }
 
 /* styling for progress bar */
+#progressBar {
+height: 40px;
+width: 40px;
+border: 0.5 solid red;
+}
+
+#progressFull {
+height: 40px;
+width: 40px;
+border: 0.5 solid red;
+}
 
 
 /* styling for answer area */
