@@ -213,11 +213,11 @@ timerInterval = setinterval(timerTick, 1000);
 }
 
 function stopTimer() {
-
+clearInterval(timerInterval);
 }
 
 function resetTimer() {
-
+timerElement.innterText = "10";
 }
 
 function timerTick() {
