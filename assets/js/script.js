@@ -115,6 +115,8 @@ const timerElement = document.getElementById("timer");
 
 let questionNumber = 0;
 let score = 0;
+let timerTime;
+let timerInterval;
 
 // initiallises quiz
 beginQuiz();
@@ -128,6 +130,8 @@ function beginQuiz() {
 
 function loadQuestion() {
     clearQuestion();
+    resetTimer();
+    startTimer();
     let presentQuestion = questions[questionNumber];
     let questionNum = questionNumber + 1;
     questionText.innerHTML = "Question " + questionNum + " / " + questions.length + " - " + presentQuestion.question;
@@ -155,6 +159,7 @@ function clearQuestion() {
 
 //function to choose answer
 function chooseAnswer(e) {
+    stopTimer();
     const chosenAnswer = e.target;
     const chooseright = chosenAnswer.dataset.correct === "true";
     if (chooseright) {
@@ -190,6 +195,7 @@ function displaybutton() {
     if (questionNumber < questions.length) {
         loadQuestion();
     } else {
+        stopTimer();
         scoreResults();
     }
 }
