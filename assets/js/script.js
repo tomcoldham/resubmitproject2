@@ -232,5 +232,6 @@ function timerTick() {
 }
 
 function updateTimer() {
-
+const roundedTime = Math.round(timerTime);
+timerElement.innerText = roundedTime;
 }
