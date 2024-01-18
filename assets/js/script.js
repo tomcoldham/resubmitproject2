@@ -221,6 +221,13 @@ timerElement.innterText = "10";
 }
 
 function timerTick() {
+    if (timerTime > 0) {
+        timerTime -- ;
+        updateTimer();
+    } else {
+        stopTimer();
+        displaybutton();
+    }
 
 }
 
