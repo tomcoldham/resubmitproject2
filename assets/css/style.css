@@ -62,7 +62,7 @@ p {
 }
 
 /* styling for next button */
-.nextquestionstyle {
+.nextquestionstyle, .restartquestionstyle {
     height: 65px;
     width: 250px;
     background-color: #8BC6EC;
