@@ -106,6 +106,8 @@ const questions = [
 const questionText = document.getElementById("questiondisplay");
 const questionAnswer = document.getElementById("questionanswers");
 const nextQuestion = document.getElementById("next-question");
+const restart = document.getElementById("restart-question");
+
 
 // question number and score tracker
 
