@@ -108,6 +108,7 @@ const questionAnswer = document.getElementById("questionanswers");
 const nextQuestion = document.getElementById("next-question");
 const restart = document.getElementById("restart-question");
 const timerElement = document.getElementById("timer");
+const progressBar = document.getElementById("progressBar")
 
 
 
@@ -218,7 +219,7 @@ function restartQuiz() {
 function startTimer() {
 timerTime = 10;
 updateTimer();
-timerInterval = setinterval(timerTick, 1000);
+timerInterval = setInterval(timerTick, 1000);
 }
 
 function stopTimer() {
@@ -226,7 +227,7 @@ clearInterval(timerInterval);
 }
 
 function resetTimer() {
-timerElement.innterText = "10";
+timerElement.innerText = "10";
 }
 
 function timerTick() {
