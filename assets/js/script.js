@@ -146,104 +146,139 @@ function loadQuestion() {
         }
         button.addEventListener("click", chooseAnswer);
     });
-// Add click event listener for clue button
-askClue.addEventListener("click", () => {
-    giveclue();
-});
-// function to clear the previous question
+    // Add click event listener for clue button
+    askClue.addEventListener("click", () => {
+        giveclue();
+    });
+    // function to clear the previous question
 
-function clearQuestion() {
-    nextQuestion.disabled = true;
-    while (questionAnswer.firstChild) {
-        questionAnswer.removeChild(questionAnswer.firstChild);
-    }
-
-}
-
-//function to choose answer
-function chooseAnswer(e) {
-    stopTimer();
-    const chosenAnswer = e.target;
-    const chooseright = chosenAnswer.dataset.correct === "true";
-    if (chooseright) {
-        chosenAnswer.classList.add("correct");
-        score++;
-    }
-    else {
-        chosenAnswer.classList.add("incorrect");
-    }
-    Array.from(questionAnswer.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct");
+    function clearQuestion() {
+        nextQuestion.disabled = true;
+        askClue.disabled = false;
+        while (questionAnswer.firstChild) {
+            questionAnswer.removeChild(questionAnswer.firstChild);
         }
-        button.disabled = true;
+
+    }
+
+    //function to choose answer
+    function chooseAnswer(e) {
+        stopTimer();
+        const chosenAnswer = e.target;
+        const chooseright = chosenAnswer.dataset.correct === "true";
+        if (chooseright) {
+            chosenAnswer.classList.add("correct");
+            score++;
+        }
+        else {
+            chosenAnswer.classList.add("incorrect");
+        }
+        Array.from(questionAnswer.children).forEach(button => {
+            if (button.dataset.correct === "true") {
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+
+        });
+        nextQuestion.disabled = false;
+        restart.disabled = false;
+        askClue.disabled = true;
+    }
+
+
+
+
+    //function to show scores at end of quiz
+    function scoreResults() {
+        clearQuestion();
+        questionText.innerHTML = `you scored ${score} out of ${questions.length}!`;
+    }
+
+    // function to show next button after question is pressed, display score if question number is the same as.
+    function displaybutton() {
+        questionNumber++;
+        if (questionNumber < questions.length) {
+            loadQuestion();
+        } else {
+            stopTimer();
+            scoreResults();
+        }
+    }
+
+    // gets user the next question when next is clicked
+    nextQuestion.addEventListener("click", () => {
+        displaybutton();
 
     });
-    nextQuestion.disabled = false;
-    restart.disabled = false;
-}
+
+
+    function giveclue() {
+
+        const incorrectButtons = Array.from(questionAnswer.children).filter(button => button.dataset.correct !== "true");
+        if (incorrectButtons.length > 0) {
+
+            const randomIndex = Math.floor(Math.random() * incorrectButtons.length);
+
+            const randomIncorrectButton = incorrectButtons[randomIndex];
 
 
 
+            // Remove the "incorrect" class from all incorrect buttons
 
-//function to show scores at end of quiz
-function scoreResults() {
-    clearQuestion();
-    questionText.innerHTML = `you scored ${score} out of ${questions.length}!`;
-}
+            incorrectButtons.forEach(button => {
 
-// function to show next button after question is pressed, display score if question number is the same as.
-function displaybutton() {
-    questionNumber++;
-    if (questionNumber < questions.length) {
-        loadQuestion();
-    } else {
-        stopTimer();
-        scoreResults();
+                button.classList.remove("incorrect");
+
+                button.disabled = false;
+
+            });
+
+            // Add the "incorrect" class only to the randomly chosen incorrect button
+
+            randomIncorrectButton.classList.add("incorrect");
+
+            randomIncorrectButton.disabled = true;
+
+            askClue.disabled = true;
+
+        }
+
     }
-}
-
-// gets user the next question when next is clicked
-nextQuestion.addEventListener("click", () => {
-    displaybutton();
-
-});
-
-restart.addEventListener("click", restartQuiz);
-function restartQuiz() {
-    questionNumber = -1;
-    score = 0;
-    stopTimer();
-    displaybutton();
-}
-
-// Timer functions
-function startTimer() {
-    timerTime = 10;
-    updateTimer();
-    timerInterval = setInterval(timerTick, 1000);
-}
-
-function stopTimer() {
-    clearInterval(timerInterval);
-}
-
-function resetTimer() {
-    timerElement.innerText = "10";
-}
-
-function timerTick() {
-    if (timerTime > 0) {
-        timerTime--;
-        updateTimer();
-    } else {
+    restart.addEventListener("click", restartQuiz);
+    function restartQuiz() {
+        questionNumber = -1;
+        score = 0;
         stopTimer();
         displaybutton();
     }
 
-}
+    // Timer functions
+    function startTimer() {
+        timerTime = 10;
+        updateTimer();
+        timerInterval = setInterval(timerTick, 1000);
+    }
 
-function updateTimer() {
-    const roundedTime = Math.round(timerTime);
-    timerElement.innerText = roundedTime;
-}
+    function stopTimer() {
+        clearInterval(timerInterval);
+    }
+
+    function resetTimer() {
+        timerElement.innerText = "10";
+    }
+
+    function timerTick() {
+        if (timerTime > 0) {
+            timerTime--;
+            updateTimer();
+        } else {
+            stopTimer();
+            displaybutton();
+        }
+
+    }
+
+    function updateTimer() {
+        const roundedTime = Math.round(timerTime);
+        timerElement.innerText = roundedTime;
+    }}
