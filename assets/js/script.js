@@ -102,7 +102,6 @@ const questions = [
 ];
 
 // assigned variables to html elements
-
 const questionText = document.getElementById("questiondisplay");
 const questionAnswer = document.getElementById("questionanswers");
 const nextQuestion = document.getElementById("next-question");
@@ -110,10 +109,7 @@ const restart = document.getElementById("restart-question");
 const timerElement = document.getElementById("timer");
 const askClue = document.getElementById("clue-question")
 
-
-
 // question number and score tracker
-
 let questionNumber = 0;
 let score = 0;
 let timerTime;
@@ -128,7 +124,6 @@ function beginQuiz() {
 }
 
 // function to load next question
-
 function loadQuestion() {
     clearQuestion();
     resetTimer();
@@ -147,12 +142,12 @@ function loadQuestion() {
         }
         button.addEventListener("click", chooseAnswer);
     });
-    // Add click event listener for clue button
-    askClue.addEventListener("click", () => {
-        giveclue();
+//  Add click event listener for clue button
+         askClue.addEventListener("click", () => {
+         giveclue();
     });
-    // function to clear the previous question
 
+// function to clear the previous question
     function clearQuestion() {
         nextQuestion.disabled = true;
         askClue.disabled = false;
@@ -186,9 +181,6 @@ function loadQuestion() {
         askClue.disabled = true;
     }
 
-
-
-
     //function to show scores at end of quiz
     function scoreResults() {
         clearQuestion();
@@ -209,43 +201,28 @@ function loadQuestion() {
     // gets user the next question when next is clicked
     nextQuestion.addEventListener("click", () => {
         displaybutton();
-
     });
 
-
-    function giveclue() {
-
-        const incorrectButtons = Array.from(questionAnswer.children).filter(button => button.dataset.correct !== "true");
-        if (incorrectButtons.length > 0) {
-
-            const randomIndex = Math.floor(Math.random() * incorrectButtons.length);
-
-            const randomIncorrectButton = incorrectButtons[randomIndex];
-
-
-
-            // Remove the "incorrect" class from all incorrect buttons
-
-            incorrectButtons.forEach(button => {
-
-                button.classList.remove("incorrect");
-
-                button.disabled = false;
-
-            });
-
-            // Add the "incorrect" class only to the randomly chosen incorrect button
-
-            randomIncorrectButton.classList.add("incorrect");
-
-            randomIncorrectButton.disabled = true;
-
-            askClue.disabled = true;
-
-        }
-
+// Function to give the users a clue to show one wrong answer
+function giveclue() {
+    const incorrectButtons = Array.from(questionAnswer.children).filter(button => button.dataset.correct !== "true");
+    if (incorrectButtons.length > 0) {
+        const randomIndex = Math.floor(Math.random() * incorrectButtons.length);
+        const randomIncorrectButton = incorrectButtons[randomIndex];
+        // Remove the "incorrect" class from all incorrect buttons
+        incorrectButtons.forEach(button => {
+            button.classList.remove("incorrect");
+            button.disabled = false;
+        });
+        // Add the "incorrect" class only to the randomly chosen incorrect button
+        randomIncorrectButton.classList.add("incorrect");
+        randomIncorrectButton.disabled = true;
+        askClue.disabled = true;
     }
+}
+
     restart.addEventListener("click", restartQuiz);
+
     function restartQuiz() {
         questionNumber = -1;
         score = 0;
@@ -282,4 +259,4 @@ function loadQuestion() {
     function updateTimer() {
         const roundedTime = Math.round(timerTime);
         timerElement.innerText = roundedTime;
-    }}
+    }
