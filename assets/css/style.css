@@ -180,3 +180,20 @@ top: 20px;
 font-size: 15px;
 }
 }
+
+@media only screen and (max-width: 1024px) {
+* {
+font-size: larger;
+}
+.gamearea {
+min-height: 75vh;
+min-width: 0vh;
+}
+
+.restartquestionstyle {
+position: relative;
+right: 14px;
+}
+
+
+}
