@@ -128,7 +128,18 @@ p {
     text-align: center;
 }
 
+.correct {
+background-color: rgb(138, 223, 11);
+color: white;
+}
+    
+/* shows red if question is incorrect */
+.incorrect {
+background-color: rgb(124, 4, 4);
+color: white;
+}
 /* give hovering affect only when device supports hover */
+
 @media (hover: hover) {
     .answerbuttons:hover {
         background-color: rgb(41, 122, 177);
@@ -140,18 +151,6 @@ p {
 
     .restartquestionstyle:hover {
         transform: scale(1.2)
-    }
-
-    /* shows green if question is correct */
-    .correct {
-        background-color: rgb(138, 223, 11);
-        color: white;
-    }
-
-    /* shows red if question is incorrect */
-    .incorrect {
-        background-color: rgb(124, 4, 4);
-        color: white;
     }
 }
     /* media query for smaller devices */
