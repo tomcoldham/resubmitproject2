@@ -108,6 +108,7 @@ const questionAnswer = document.getElementById("questionanswers");
 const nextQuestion = document.getElementById("next-question");
 const restart = document.getElementById("restart-question");
 const timerElement = document.getElementById("timer");
+const askClue = document.getElementById("clue-question")
 
 
 
