@@ -1,39 +1,61 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Geography quiz
 
-Welcome,
+The geogrpaphy quiz is a fun and easy to use interactive quiz that gives its users an easy way to test out the general knowledge of the subject and provide feedback for how well they did.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive-Mockup](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/mockuproject2.PNG)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Features
 
-## Codeanywhere Reminders
+- The quiz features 11 general knowledge questions about geography with various degrees of diffuculty. Users have the added functionality of knowing which questions
+are correct and which ones they answered were wrong in a live format. There is also a score counter at the end of the quiz so you can compare yourself with others!
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- The questions and answer options are laid out in a simple and easy to read way and the design of the website has been kept minimalistic to ensure that the primary objective is able to be carried out easily by users. This has been aided by big answer buttons as well as large font which gives users an easy time to navigate the elements of the quiz.
+  
+- Interactivity has been established in a number of ways, firstly the answer is highlighted green or red depending on if they got the answer right, and the next button is actually disabled until the user clicks on an answer. Lastly the user can only select one answer per question and the game prevents them from answering again.
 
-`python3 -m http.server`
+![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquiz.PNG)
+![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquizwrong.PNG)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Testing
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- tested the quiz on multiple screen sizes and is fully operational. Text is still easy to read and is mobile/tablet responsive.
 
-`http_server`
+### Validator Testing
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- HTML
+  - No errors were returned when passing through a HTML validator
+- CSS
+  - No errors were found when passing through a CSS validator
+- JS
+  - javascript testing showed 1 error that i was unable to fix even though the code worked.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Testing](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/project2htmlcheck.PNG)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Testing](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/csscheckproject2.PNG)
 
-To log into the Heroku toolbelt CLI:
+### Unfixed Bugs
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+-javascript works but is showing an error when i run it through the checker on line one, unable to fix.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Deployment
 
----
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - Under code and automation, click on pages.
+  - Make sure source is on 'deployed from branch' then under 'branch' select 'main' and /root and click save.
+  - Go back on the repository and on the right hand sart of the screen theres a section called deployments.
+  - Click on deployments and there will be the deployed website to view.
+  
+The live link can be found here - 
 
-Happy coding!
+## Credits
+
+### Content
+
+- Code for the functionality of the javascript was taken from various tutorials that i found online such as general forums and video tutorials.
+- gradients for the background nnd button where taken of a website where you can customise and make your own.
+- w3schools was used for help with timer function.
+  
+### Media
+
+- Icons from fontawesome were used.
