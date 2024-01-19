@@ -195,6 +195,11 @@ function loadQuestion() {
         } else {
             stopTimer();
             scoreResults();
+            document.getElementById("progressFull").style.display = "none";
+            document.getElementById("progressBar").style.display = "none";
+            document.getElementById("clue-question").style.display = "none";
+            nextQuestion.style.display = "none";
+            document.getElementById("timer").style.display = "none";
         }
     }
 
