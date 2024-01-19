@@ -19,7 +19,7 @@ const questions = [
         ]
     },
     {
-        question: "What is the name of the river that flows through London?",
+        question: "Which river flows through London?",
         choices: [
             { text: "River Mersey", correct: false },
             { text: "River Dee", correct: false },
@@ -37,7 +37,7 @@ const questions = [
         ]
     },
     {
-        question: "How many countries are their in the world?",
+        question: "How many countries are there in the world?",
         choices: [
             { text: "105", correct: false },
             { text: "145", correct: false },
@@ -146,8 +146,10 @@ function loadQuestion() {
         }
         button.addEventListener("click", chooseAnswer);
     });
-
-}
+// Add click event listener for clue button
+askClue.addEventListener("click", () => {
+    giveclue();
+});
 // function to clear the previous question
 
 function clearQuestion() {
