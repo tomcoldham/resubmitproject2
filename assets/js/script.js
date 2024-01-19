@@ -107,7 +107,7 @@ const questionAnswer = document.getElementById("questionanswers");
 const nextQuestion = document.getElementById("next-question");
 const restart = document.getElementById("restart-question");
 const timerElement = document.getElementById("timer");
-const askClue = document.getElementById("clue-question")
+const askClue = document.getElementById("clue-question");
 
 // question number and score tracker
 let questionNumber = 0;
@@ -146,7 +146,7 @@ function loadQuestion() {
          askClue.addEventListener("click", () => {
          giveclue();
     });
-
+}
 // function to clear the previous question
     function clearQuestion() {
         nextQuestion.disabled = true;
