@@ -125,6 +125,11 @@ function beginQuiz() {
 
 // function to load next question
 function loadQuestion() {
+    document.getElementById("progressFull").style.display = 'block';
+    document.getElementById("progressBar").style.display = 'block';
+    nextQuestion.style.display = 'block';
+    document.getElementById("timer").style.display = 'block';
+    document.getElementById("clue-question").style.display = 'block';
     clearQuestion();
     resetTimer();
     startTimer();
