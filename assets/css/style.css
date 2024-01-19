@@ -153,39 +153,24 @@ p {
         background-color: rgb(124, 4, 4);
         color: white;
     }
-
+}
     /* media query for smaller devices */
-    @media only screen and (max-width: 768px) {
-        .gamearea {
-            margin: auto;
-            min-height: 60vh;
-            min-width: 15vh;
-        }
+@media only screen and (max-width: 768px) {
+.gamearea {
+min-height: 75vh;
+min-width: 0vh;
+}
 
+.cluebtn {
+width: 60px;
+height: 50px;
+font-size: 25px;
+}
 
-        h1,
-        p {
-            font-size: 15px;
-        }
-
-        .answerbuttons {
-            text-align: left;
-            margin: 5px;
-            padding: 5px;
-            height: 45px;
-            border-radius: 10px;
-            font-size: 15px;
-        }
-
-        .nextquestionstyle {
-            height: 40px;
-            width: 75px;
-            background-color: #8BC6EC;
-            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-            font-size: 20px;
-            border-radius: 10px;
-            align-items: center;
-            margin-left: 140px;
-
-        }
-    }}
+.restartquestionstyle {
+width: 60px;
+height: 50px;
+font-size: 25px;
+margin-left: 325px;
+}
+}
