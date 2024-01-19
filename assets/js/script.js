@@ -184,7 +184,8 @@ function loadQuestion() {
     //function to show scores at end of quiz
     function scoreResults() {
         clearQuestion();
-        questionText.innerHTML = `you scored ${score} out of ${questions.length}!`;
+        questionText.innerHTML = `you scored ${score} out of ${questions.length}! If you wish to try again 
+  press the restart button.`;
     }
 
     // function to show next button after question is pressed, display score if question number is the same as.
@@ -195,11 +196,11 @@ function loadQuestion() {
         } else {
             stopTimer();
             scoreResults();
-            document.getElementById("progressFull").style.display = "none";
-            document.getElementById("progressBar").style.display = "none";
-            document.getElementById("clue-question").style.display = "none";
-            nextQuestion.style.display = "none";
-            document.getElementById("timer").style.display = "none";
+            document.getElementById("progressFull").style.display = 'none';
+            document.getElementById("progressBar").style.display = 'none';
+            nextQuestion.style.display = 'none';
+            document.getElementById("timer").style.display = 'none';
+            document.getElementById("clue-question").style.display = 'none';
         }
     }
 
