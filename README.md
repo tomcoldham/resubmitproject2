@@ -12,6 +12,11 @@ are correct and which ones they answered were wrong in a live format. There is a
 - The questions and answer options are laid out in a simple and easy to read way and the design of the website has been kept minimalistic to ensure that the primary objective is able to be carried out easily by users. This has been aided by big answer buttons as well as large font which gives users an easy time to navigate the elements of the quiz.
   
 - Interactivity has been established in a number of ways, firstly the answer is highlighted green or red depending on if they got the answer right, and the next button is actually disabled until the user clicks on an answer. Lastly the user can only select one answer per question and the game prevents them from answering again.
+  
+- Additional features have been added to make the quiz more unique and fun. For example a timer feature has been added which gives users an automatic countdown from 10 seconds otherwise it will skip on to the next question.
+- Another featurer which users will find interesting is the clue function. IF a user is stuck on a question they can press the lightbulb symbol to
+- remove 1 wrong answer. It has been properly coded to ensure this can only be done once per question.
+- Final feature thats been added is that the restart button has been added, this can be used at any point in the quiz for the user to restart should they wish to do so.
 
 ![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquiz.PNG)
 ![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquizwrong.PNG)
