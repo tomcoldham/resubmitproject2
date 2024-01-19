@@ -90,19 +90,7 @@ p {
 
 /* styling for next button */
 
-
-.nextquestionstyle {
-    height: 65px;
-    width: 250px;
-    background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-    font-size: 40px;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 32px;
-}
-
-.cluebutton {
+.cluebtn {
     height: 50px;
     width: 120px;
     background-color: #8BC6EC;
@@ -112,6 +100,17 @@ p {
     margin-left: 10px;
     position: relative;
     bottom: 52px;
+}
+
+.nextquestionstyle {
+    height: 50px;
+    width: 250px;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    font-size: 40px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 32px;
 }
 
 
@@ -188,4 +187,4 @@ p {
             margin-left: 140px;
 
         }
-    }
+    }}
