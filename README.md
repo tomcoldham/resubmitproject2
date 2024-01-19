@@ -2,7 +2,8 @@
 
 The geogrpaphy quiz is a fun and easy to use interactive quiz that gives its users an easy way to test out the general knowledge of the subject and provide feedback for how well they did.
 
-![Responsive-Mockup](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/mockuproject2.PNG)
+![Responsive-Mockup](https://github.com/tomcoldham/resubmitproject2/blob/main/assets/images/resubmitmockup.PNG)
+
 
 ## Features
 
@@ -16,10 +17,13 @@ are correct and which ones they answered were wrong in a live format. There is a
 - Additional features have been added to make the quiz more unique and fun. For example a timer feature has been added which gives users an automatic countdown from 10 seconds otherwise it will skip on to the next question.
 - Another featurer which users will find interesting is the clue function. IF a user is stuck on a question they can press the lightbulb symbol to
 - remove 1 wrong answer. It has been properly coded to ensure this can only be done once per question.
+- A progress bar has been added so that the user has a more eye catching and better user experience to track their progress during the quiz.
 - Final feature thats been added is that the restart button has been added, this can be used at any point in the quiz for the user to restart should they wish to do so.
 
 ![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquiz.PNG)
 ![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquizwrong.PNG)
+![Features](https://github.com/tomcoldham/resubmitproject2/blob/main/assets/images/resubmittimefunction.PNG)
+![Features](https://github.com/tomcoldham/resubmitproject2/blob/main/assets/images/resubmitclue.PNG)
 
 ## Testing
 
