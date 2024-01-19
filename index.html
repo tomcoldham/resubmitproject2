@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Geography knowledge quiz</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- section element for quiz -->
     <section>
-      <!-- div class for where quiz is played-->
-      <div class="gamearea">
-      <h1>Geography knowledge quiz</h1>
-      <h2 id="timer">placeholder</h2>
-      <button class="restartquestionstyle" id="restart-question"><i class="fa-solid fa-repeat"></i></button>
-      <button class="cluebutton" id="clue-question"><i class="fa-solid fa-lightbulb"></i></button>
-        <p id="questiondisplay">Question place holder text</p>
-        <div id="progressBar">
-          <div id="progressFull"></div>
-        <!-- placeholder text for questions -->
+        <!-- div class for where quiz is played-->
+        <div class="gamearea">
+            <h1>Geography knowledge quiz</h1>
+            <h2 id="timer">placeholder</h2>
+            <button class="restartquestionstyle" id="restart-question"><i class="fa-solid fa-repeat"></i></button>
+            <button class="cluebutton" id="clue-question"><i class="fa-solid fa-lightbulb"></i></button>
+            <p id="questiondisplay">Question place holder text</p>
+            <div id="progressBar">
+                <div id="progressFull"></div>
+                <!-- placeholder text for questions -->
+            </div>
+            <!-- answer section for answering the questions with buttons -->
+            <div id="questionanswers">
+                <button class="answerbuttons">A</button>
+                <button class="answerbuttons">B</button>
+                <button class="answerbuttons">C</button>
+                <button class="answerbuttons">D</button>
+            </div>
+            <!-- section for using next button for displaying next question -->
+            <button class="nextquestionstyle" id="next-question"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
-        <!-- answer section for answering the questions with buttons -->
-        <div id="questionanswers">
-          <button class="answerbuttons">A</button>
-          <button class="answerbuttons">B</button>
-          <button class="answerbuttons">C</button>
-          <button class="answerbuttons">D</button>
-        </div>
-        <!-- section for using next button for displaying next question -->
-        <button class="nextquestionstyle" id="next-question"><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
     </section>
     <script src=assets/js/script.js></script>
     <script src="https://kit.fontawesome.com/85583bd316.js" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
