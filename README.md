@@ -2,7 +2,7 @@
 
 The geogrpaphy quiz is a fun and easy to use interactive quiz that gives its users an easy way to test out the general knowledge of the subject and provide feedback for how well they did.
 
-![Responsive-Mockup](https://github.com/tomcoldham/resubmitproject2/blob/main/assets/images/resubmitmockup.PNG)
+![Responsive-Mockup](https://github.com/tomcoldham/resubmitproject2/blob/main/media/resubmitmockup.PNG)
 
 
 ## Features
@@ -22,8 +22,8 @@ are correct and which ones they answered were wrong in a live format. There is a
 
 ![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquiz.PNG)
 ![Features](https://github.com/tomcoldham/quizproject2/blob/main/assets/images/geoquizwrong.PNG)
-![Features](https://github.com/tomcoldham/resubmitproject2/blob/main/assets/images/resubmittimefunction.PNG)
-![Features](https://github.com/tomcoldham/resubmitproject2/blob/main/assets/images/resubmitclue.PNG)
+![Features](https://github.com/tomcoldham/resubmitproject2/blob/main/media/resubmittimefunction.PNG)
+![Features](https://github.com/tomcoldham/resubmitproject2/blob/main/media//resubmitclue.PNG)
 
 ## Testing
 
