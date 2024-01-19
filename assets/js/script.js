@@ -1,7 +1,7 @@
 // questions to be displayed
 const questions = [
     {
-        question: "What is the capital of France?",
+        question: "Can you name the capital of France?",
         choices: [
             { text: "Paris", correct: true },
             { text: "Rome", correct: false },
